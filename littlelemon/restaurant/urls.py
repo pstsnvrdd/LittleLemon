@@ -1,7 +1,8 @@
 from django.urls import path
-from . import views
+from .views import *
 
 urlpatterns = [
-
-    path('', views.index, name='index')
+    path('menu-items', MenuView.as_view()),
+    path('menu-items/<int:pk>', MenuDetailView.as_view()),
+    path('message/', msg),
 ]
